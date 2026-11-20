@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Event snippet for Recurso &quot;clique para ligar&quot; conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18585124905/NTAqCJewsbwdEKmAip5F',
+      'value': 1.0,
+      'currency': 'BRL',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
     <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PRKN4ZZN"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -57,7 +76,7 @@
 
             <a
                 class="btn btn-whatsapp header-whatsapp"
-                href="https://wa.me/5561991843211"
+                href="https://wa.me/5561991843211" onclick="gtag_report_conversion()"
                 target="_blank"
             >
                 WhatsApp
@@ -98,7 +117,7 @@
                     <div class="hero-buttons">
 
                         <a
-                            href="https://wa.me/5561991843211"
+                            href="https://wa.me/5561991843211" onclick="gtag_report_conversion()"
                             target="_blank"
                             class="btn btn-primary"
                         >
@@ -106,7 +125,7 @@
                         </a>
 
                         <a
-                            href="tel:+5561991843211"
+                            href="tel:+5561991843211" onclick="gtag_report_conversion()"
                             class="btn btn-secondary"
                         >
                             Ligar agora
@@ -284,7 +303,7 @@
                         </p>
 
                         <a
-                            href="https://wa.me/5561991843211"
+                            href="https://wa.me/5561991843211" onclick="gtag_report_conversion()"
                             target="_blank"
                             class="btn btn-primary"
                         >
@@ -571,7 +590,7 @@
                 </div>
 
                 <a
-                    href="https://wa.me/5561991843211"
+                    href="https://wa.me/5561991843211" onclick="gtag_report_conversion()"
                     target="_blank"
                     class="btn btn-white"
                 >
@@ -611,14 +630,14 @@
 
                         <div>
                             <strong>📱 WhatsApp</strong>
-                            <a href="https://wa.me/5561991843211">
+                            <a href="https://wa.me/5561991843211" onclick="gtag_report_conversion()">
                                 (61) 99184-3211
                             </a>
                         </div>
 
                         <div>
                             <strong>📞 Telefone</strong>
-                            <a href="tel:+5561991843211">
+                            <a href="tel:+5561991843211" onclick="gtag_report_conversion()">
                                 (61) 99184-3211
                             </a>
                         </div>
@@ -846,11 +865,11 @@
 
                 <h3>Contato</h3>
 
-                <a href="https://wa.me/5561991843211">
+                <a href="https://wa.me/5561991843211" onclick="gtag_report_conversion()">
                     WhatsApp
                 </a>
 
-                <a href="tel:+5561991843211">
+                <a href="tel:+5561991843211" onclick="gtag_report_conversion()">
                     (61) 99184-3211
                 </a>
 
@@ -885,7 +904,7 @@
     <!-- BOTÃO FLUTUANTE WHATSAPP -->
 
     <a
-        href="https://wa.me/5561991843211"
+        href="https://wa.me/5561991843211" onclick="gtag_report_conversion()"
         target="_blank"
         class="whatsapp-float"
         aria-label="Falar pelo WhatsApp"
